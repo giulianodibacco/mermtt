@@ -14,6 +14,7 @@ class Tei extends React.Component {
     this.allowedViews = this.props.allowedViews.map(view => {
       return view.url
     })
+    this.teiPath = this.props.tei.split('/').slice(0, -1).join('/') + "/"
   }
 
   componentDidMount() {
@@ -26,7 +27,7 @@ class Tei extends React.Component {
     // Override default CETEI TEI behaviors.
     ct.addBehavior('tei', 'teiHeader', undefined)
 
-    const teiData = await ct.getHTML5('data/example.xml')
+    const teiData = await ct.getHTML5(`/data/${this.props.tei}`)
     this.setState({
       teiData
     })
@@ -38,7 +39,7 @@ class Tei extends React.Component {
       view = this.props.view
     }
     const teiContent = this.state.teiData 
-      ? <TeiElement teiDomElement={this.state.teiData} />
+      ? <TeiElement teiDomElement={this.state.teiData} teiPath={this.teiPath} />
       : 'Loading ...' 
     const viewStyle = view.charAt(0).toUpperCase() + view.substr(1).toLowerCase()
     return <div className={`Tei ${viewStyle}`}>{teiContent}</div>

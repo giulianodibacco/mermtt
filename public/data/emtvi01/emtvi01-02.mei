@@ -22,13 +22,15 @@
                     <section>
                         <staff n="1">
                             <layer>
-                                <note dur="brevis" pname="c" oct="4"/>                           <note dur="brevis" pname="e" oct="4"/>                           <note dur="minima" pname="d" oct="4" stem.dir="up"/>
-                                <note dur="minima" pname="e" oct="4" stem.dir="up"/>
-                                <note dur="minima" pname="d" oct="4" stem.dir="down"/>
-                                <note dur="minima" pname="e" oct="4" stem.dir="down"/>
-                                <note dur="minima" pname="d" oct="4" stem.dir="up"/>
-                                <note dur="brevis" pname="c" oct="4"/>                           <note dur="brevis" pname="c" oct="4"/>                           <note dur="brevis" pname="e" oct="4"/>                           <note dur="brevis" pname="c" oct="4"/>                           <note dur="longa" pname="d" oct="4" stem.dir="down"/>
-                                </layer>
+                                <note dur="longa" pname="c" oct="4" stem.dir="down"/>
+                                <note dur="brevis" pname="d" oct="4"/>
+                                <note dur="brevis" pname="e" oct="4"/>
+                                <note dur="brevis" pname="f" oct="4"/>
+                                <note dur="brevis" pname="e" oct="4"/>
+                                <note dur="brevis" pname="f" oct="4"/>
+                                <note dur="longa" pname="d" oct="4"/>
+                                <note dur="longa" pname="c" oct="4" stem.dir="down"/>
+                            </layer>
                         </staff>
                     </section>
                 </score>

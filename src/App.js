@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.scss'
 import Body from './Body'
-import { BrowserRouter as Router, Route } from "react-router-dom"
+import { HashRouter as Router, Route } from "react-router-dom"
 
 
 class App extends React.Component {
@@ -30,10 +30,11 @@ class App extends React.Component {
 
   render() {
     return (
-      <Router>
+      <Router hashType="noslash">
         <div className="App">
-          <Route path="/:view?" exact component={(p) => 
+          <Route path="/:view?" component={(p) => 
             <Body 
+              tei={this.props.tei}
               defaultView={this.defaultView}
               view={p.match.params.view} />} />
         </div>

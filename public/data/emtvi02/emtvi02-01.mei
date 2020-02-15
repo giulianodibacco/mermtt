@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://music-encoding.org/schema/4.0.0/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<mei xmlns="http://www.music-encoding.org/ns/mei">
+    <meiHead>
+        <fileDesc>
+            <titleStmt>
+                <title></title>
+            </titleStmt>
+            <pubStmt></pubStmt>
+        </fileDesc>
+    </meiHead>
+    <music>
+        <body>
+            <mdiv>
+                <score>
+                    <scoreDef>
+                        <staffGrp>
+                            <staffDef n="1">
+                            </staffDef>
+                        </staffGrp>
+                    </scoreDef>
+                    <section>
+                        <staff n="1">
+                            <layer>
+                                <note dur="brevis" pname="d" oct="4"/>
+                                <note dur="semibrevis" pname="e" oct="4"/>
+                                <note dur="semibrevis" pname="f" oct="4"/>
+                                <note dur="semibrevis" pname="e" oct="4"/>
+                                <note dur="minima" pname="f" oct="4"/>
+                                <note dur="minima" pname="d" oct="4"/>
+                                <note dur="minima" pname="c" oct="4"/>
+                                <note dur="minima" pname="f" oct="4"/>
+                                <note dur="minima" pname="d" oct="4"/>
+                                <note dur="minima" pname="e" oct="4"/>
+                                <note dur="minima" pname="f" oct="4"/>
+                                <note dur="minima" pname="d" oct="4"/>
+                                <note dur="minima" pname="c" oct="4"/>
+                                <note dur="brevis" pname="d" oct="4"/>
+                            </layer>
+                        </staff>
+                    </section>
+                </score>
+            </mdiv>
+        </body>
+    </music>
+</mei>

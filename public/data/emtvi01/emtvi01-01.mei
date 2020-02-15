@@ -23,10 +23,10 @@
                         <staff n="1">
                             <layer>
                                 <note dur="maxima" pname="d" oct="4" stem.dir="down"/>
-                                <note dur="longa" pname="d" oct="4" stem.dir="down"/>
+                                <note dur="longa" pname="c" oct="4" stem.dir="down"/>
                                 <note dur="brevis" pname="d" oct="4"/>
                                 <note dur="semibrevis" pname="d" oct="4"/>
-                                <note dur="minima" pname="d" oct="4" stem.dir="up"/>
+                                <note dur="minima" pname="c" oct="4" stem.dir="up"/>
                                 <note dur="semiminima" pname="d" oct="4" stem.dir="up"/>
                             </layer>
                         </staff>

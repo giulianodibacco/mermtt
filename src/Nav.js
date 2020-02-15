@@ -16,7 +16,7 @@ class App extends React.Component {
             }
             return (
               <li key={`l-${i}`} className={isActive}>
-                <Link to={`/${view.url}`}>{view.label}</Link>
+                <Link to={view.url}>{view.label}</Link>
               </li>
             )
           })}

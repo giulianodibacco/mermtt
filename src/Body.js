@@ -32,6 +32,7 @@ class Body extends React.Component {
       <>
         <Nav views={this.views} activeView={this.props.view} defaultView={this.defaultView}/>
         <Tei 
+            tei={this.props.tei}
             defaultView={this.props.defaultView}
             view={this.props.view} 
             allowedViews={this.views} />

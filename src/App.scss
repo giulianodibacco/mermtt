@@ -13,12 +13,14 @@
     float: left;
   }
   
-  li a {
+  li a, li a:visited {
     display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    background-color: transparent;
+    border-bottom: None;
   }
   
   li a:hover {

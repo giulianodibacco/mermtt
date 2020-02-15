@@ -21,7 +21,7 @@ class Music extends React.Component {
   }
 
   async renderMusic(url) {
-    const meiData = await fetch(`data/${url}`).then(response => response.text())
+    const meiData = await fetch(`/data/${this.props.teiPath}${url}`).then(response => response.text())
 
     // This is an example
     const type = this.props.notatedMusic.getAttribute('type')
@@ -43,17 +43,23 @@ class Music extends React.Component {
 
   render() {
     const url = this.props.notatedMusic.querySelector('tei-ptr').getAttribute('target')
-    const label = <TeiElement teiDomElement={this.props.notatedMusic.querySelector('tei-label')} />
+    const label = <TeiElement teiDomElement={this.props.notatedMusic.querySelector('tei-label')} teiPath={this.props.teiPath} />
     let music = ''
-    // If there is a tei-graphic element, then show the image, otherwise render with Verovio.
-    const image = this.props.notatedMusic.querySelector('tei-graphic')
-    if (image) {
-      music = <TeiElement teiDomElement={this.props.notatedMusic.querySelector('tei-graphic')} />
-    } else if (this.state.svg) {
-      music = <div dangerouslySetInnerHTML={{__html: this.state.svg}}/>
+    // notatedMusic renders contained elements as fallbacks. Start with the first and continue.
+    const musicFormats = this.props.notatedMusic.querySelectorAll('tei-ptr, tei-graphic')
+    for (const mf of Array.from(musicFormats)) {
+      if (mf.tagName.toLowerCase() === 'tei-graphic') {
+        music = <TeiElement teiDomElement={this.props.notatedMusic.querySelector('tei-graphic')} />
+        break
+      }
+      if (mf.tagName.toLowerCase() === 'tei-ptr' && this.state.svg) {
+        music = <div dangerouslySetInnerHTML={{__html: this.state.svg}}/>
+        break
+      }
+      continue
     }
     const header = (<div className="MusicHeader">
-      {label} &nbsp; <a href={`data/${url}`}>MEI</a>
+      {label} &nbsp; <a href={`/data/${this.props.teiPath}${url}`}>MEI</a>
     </div>)
     const children = (<>{header}{music}</>)
     return React.createElement(this.props.notatedMusic.tagName.toLowerCase(), 

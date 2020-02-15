@@ -22,16 +22,22 @@
                     <section>
                         <staff n="1">
                             <layer>
-                                <note dur="longa" pname="c" oct="4" stem.dir="down"/>
-                                <note dur="brevis" pname="d" oct="4"/>
-                                <note dur="brevis" pname="c" oct="4"/>
+                                <note dur="minima" pname="f" oct="4"/>
+                                <note dur="minima" pname="d" oct="4"/>
+                                <note dur="minima" pname="c" oct="4"/>
+                                <note dur="minima" pname="f" oct="4"/>
+                                <note dur="minima" pname="d" oct="4"/>
+                                <note dur="minima" pname="e" oct="4"/>
+                                <note dur="minima" pname="f" oct="4"/>
+                                <note dur="minima" pname="d" oct="4"/>
+                                <note dur="minima" pname="c" oct="4"/>
+                                <note dur="minima" pname="d" oct="4"/>
+                                <note dur="minima" pname="c" oct="4"/>
+                                <note dur="minima" pname="e" oct="4"/>
+                                <note dur="semibrevis" pname="f" oct="4"/>
                                 <note dur="semibrevis" pname="e" oct="4"/>
-                                <note dur="minima" pname="d" oct="4" stem.dir="up"/>
-                                <note dur="minima" pname="e" oct="4" stem.dir="up"/>
-                                <note dur="minima" pname="d" oct="4" stem.dir="up"/>
-                                <note dur="minima" pname="e" oct="4" stem.dir="up"/>
-                                <note dur="minima" pname="d" oct="4" stem.dir="up"/>
-                                <note dur="brevis" pname="c" oct="4"/>
+                                <note dur="brevis" pname="f" oct="4"/>
+
                             </layer>
                         </staff>
                     </section>
